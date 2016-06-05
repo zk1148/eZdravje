@@ -515,7 +515,7 @@ function pridobiPodatke() {
 
   $.ajax({
       type: 'GET',
-      url: 'https://github.com/zk1148/eZdravje/blob/gh-pages/podatki.json',
+      url: 'http://zk1148.github.io/eZdravje/podatki.json',
       crossDomain: true,
       cache: false,
       success: function(data) {
