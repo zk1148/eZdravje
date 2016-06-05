@@ -402,7 +402,7 @@ $(function() {
       var mouseOnDiv = $('#visina input');
       var tipContent = $(
         '<p><b>Telesna višina</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=telesna+vi%C5%A1ina">Telesna višina predstavlja razdaljo od vrha glave pa do pet.</a></p>'
+        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=telesna+vi%C5%A1ina">Telesna višina predstavlja <p>razdaljo od vrha glave pa <p>do pet.</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -415,7 +415,7 @@ $(function() {
       var mouseOnDiv = $('#teza input');
       var tipContent = $(
         '<p><b>Telesna teža</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=telesna+te%C5%BEa">Telesna teža predstavlja maso posameznika in glede na višino odraža tudi kvaliteto prehranjevanja.</a></p>'
+        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=telesna+te%C5%BEa">Telesna teža predstavlja maso posameznika <p>in glede na višino odraža tudi <p>kvaliteto prehranjevanja.</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -428,7 +428,7 @@ $(function() {
       var mouseOnDiv = $('#temperatura input');
       var tipContent = $(
         '<p><b>Telesna temperatura</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=telesna+temperatura">Če telesna temperatura presega 37 stopinj celzija, je previsoka in je potrebno mirovati.</a></p>'
+        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=telesna+temperatura">Če telesna temperatura presega 37 <p>stopinj celzija, je previsoka in je potrebno <p>mirovati.</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -441,7 +441,7 @@ $(function() {
       var mouseOnDiv = $('#sistolicni input');
       var tipContent = $(
         '<p><b>Sistolični tlak</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=Sistoli%C4%8Dni+tlak">Sistolični tlak je tlak v arterijah med srčnim utripom, ko se srce skrči in iztisne kri v ožilje.</a></p>'
+        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=Sistoli%C4%8Dni+tlak">Sistolični tlak je tlak v arterijah <p>med srčnim utripom, ko se <p>srce skrči in iztisne kri <p>v ožilje.</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -454,7 +454,7 @@ $(function() {
       var mouseOnDiv = $('#diastolicni input');
       var tipContent = $(
         '<p><b>Diastolični tlak</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=Diastoli%C4%8Dni+tlak">Diastolični tlak je tlak v arterijah med dvema utripoma, v času relaksacije srca.</a></p>'
+        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=Diastoli%C4%8Dni+tlak">Diastolični tlak je tlak <p>v arterijah med dvema utripoma, <p>v času relaksacije srca.</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -467,7 +467,7 @@ $(function() {
       var mouseOnDiv = $('#nasicenost input');
       var tipContent = $(
         '<p><b>Nasičenost krvi s kisikom</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=nasi%C4%8Denost+krvi+s+kisikom">Nam pove, ali je v krvi dovolj kisika ali ne.</a></p>'
+        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=nasi%C4%8Denost+krvi+s+kisikom">Nam pove, ali je v krvi <p>dovolj kisika ali ne.</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
