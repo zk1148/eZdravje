@@ -1,0 +1,278 @@
+{
+  "dimension": [
+                 {
+                   "label": "GHO",
+                   "display": "Indicator"
+                 },
+                 {
+                   "label": "PUBLISHSTATE",
+                   "display": "PUBLISH STATES"
+                 },
+                 {
+                   "label": "YEAR",
+                   "display": "Year"
+                 },
+                 {
+                   "label": "REGION",
+                   "display": "WHO region"
+                 },
+                 {
+                   "label": "SEX",
+                   "display": "Sex"
+                 }
+               ],
+    "fact": [
+              {
+                "dims": {
+                          "REGION": "Africa",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "60.0"
+              },
+              {
+                "dims": {
+                          "REGION": "Africa",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Female"
+                        },
+                "Value": "61.7"
+              },
+              {
+                "dims": {
+                          "REGION": "Africa",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Male"
+                        },
+                "Value": "58.2"
+              },
+              {
+                "dims": {
+                          "REGION": "Africa",
+                          "GHO": "Healthy life expectancy (HALE) at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "60.0"
+              },
+              {
+                "dims": {
+                          "REGION": "Americas",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "76.9"
+              },
+              {
+                "dims": {
+                          "REGION": "Americas",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Female"
+                        },
+                "Value": "79.9"
+              },
+              {
+                "dims": {
+                          "REGION": "Americas",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Male"
+                        },
+                "Value": "74.0"
+              },
+              {
+                "dims": {
+                          "REGION": "Americas",
+                          "GHO": "Healthy life expectancy (HALE) at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "77.0"
+              },
+              {
+                "dims": {
+                          "REGION": "South-East Asia",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "69.0"
+              },
+              {
+                "dims": {
+                          "REGION": "South-East Asia",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Female"
+                        },
+                "Value": "70.7"
+              },
+              {
+                "dims": {
+                          "REGION": "South-East Asia",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Male"
+                        },
+                "Value": "67.3"
+              },
+              {
+                "dims": {
+                          "REGION": "South-East Asia",
+                          "GHO": "Healthy life expectancy (HALE) at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "69.0"
+              },
+              {
+                "dims": {
+                          "REGION": "Europe",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "76.8"
+              },
+              {
+                "dims": {
+                          "REGION": "Europe",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Female"
+                        },
+                "Value": "80.2"
+              },
+              {
+                "dims": {
+                          "REGION": "Europe",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Male"
+                        },
+                "Value": "73.2"
+              },
+              {
+                "dims": {
+                          "REGION": "Europe",
+                          "GHO": "Healthy life expectancy (HALE) at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "76.8"
+              },
+              {
+                "dims": {
+                          "REGION": "Eastern Mediterranean",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "68.8"
+              },
+              {
+                "dims": {
+                          "REGION": "Eastern Mediterranean",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Female"
+                        },
+                "Value": "70.4"
+              },
+              {
+                "dims": {
+                          "REGION": "Eastern Mediterranean",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Male"
+                        },
+                "Value": "67.4"
+              },
+              {
+                "dims": {
+                          "REGION": "Eastern Mediterranean",
+                          "GHO": "Healthy life expectancy (HALE) at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "68.8"
+              },
+              {
+                "dims": {
+                          "REGION": "Western Pacific",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "76.6"
+              },
+              {
+                "dims": {
+                          "REGION": "Western Pacific",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Female"
+                        },
+                "Value": "78.7"
+              },
+              {
+                "dims": {
+                          "REGION": "Western Pacific",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Male"
+                        },
+                "Value": "74.5"
+              },
+              {
+                "dims": {
+                          "REGION": "Western Pacific",
+                          "GHO": "Healthy life expectancy (HALE) at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "76.6"
+              },
+              {
+                "dims": {
+                          "REGION": "Global",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "71,4"
+              },
+              {
+                "dims": {
+                          "REGION": "Global",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Female"
+                        },
+                "Value": "73.8"
+              },
+              {
+                "dims": {
+                          "REGION": "Global",
+                          "GHO": "Life expectancy at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Male"
+                        },
+                "Value": "69.1"
+              },
+              {
+                "dims": {
+                          "REGION": "Global",
+                          "GHO": "Healthy life expectancy (HALE) at birth (years)",
+                          "YEAR": "2015",
+                          "SEX": "Both sexes"
+                        },
+                "Value": "71"
+              }
+      ]
+}

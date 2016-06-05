@@ -249,6 +249,7 @@ function napolniTabelo(ehr) {
                 // display newest
                 $('#TelesnaTeza').val(res[0].weight);
                 sgraf.update(res[0].weight);
+
                 
 
                 
@@ -358,7 +359,7 @@ function spremeniPodatke(ehr) {
   var diastolicni= $('#KrvniTlakDiastolicni').val();
   var nasicenost = $('#NasicenostKrviSKisikom').val();
   var ehrId = ehr;
-
+  sgraf.update(parseInt(teza));
 
   var podatki = {
         // Struktura predloge je na voljo na naslednjem spletnem naslovu:
@@ -392,7 +393,7 @@ function spremeniPodatke(ehr) {
           
         }
     }); 
-      dodajTezo();
+     
 
 }
 
@@ -401,8 +402,8 @@ $(function() {
       // mouse-on example
       var mouseOnDiv = $('#visina input');
       var tipContent = $(
-        '<p><b>Telesna višina</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=telesna+vi%C5%A1ina">Telesna višina predstavlja <p>razdaljo od vrha glave pa <p>do pet.</a></p>'
+        '<p><b>Višina</b></p>' +
+        '<p><a href="http://google.com">Mogoče gugl definicijo?</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -414,8 +415,8 @@ $(function() {
       // mouse-on example
       var mouseOnDiv = $('#teza input');
       var tipContent = $(
-        '<p><b>Telesna teža</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=telesna+te%C5%BEa">Telesna teža predstavlja maso posameznika <p>in glede na višino odraža tudi <p>kvaliteto prehranjevanja.</a></p>'
+        '<p><b>Teža</b></p>' +
+        '<p><a href="http://google.com">Mogoče gugl definicijo?</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -427,8 +428,8 @@ $(function() {
       // mouse-on example
       var mouseOnDiv = $('#temperatura input');
       var tipContent = $(
-        '<p><b>Telesna temperatura</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=telesna+temperatura">Če telesna temperatura presega 37 <p>stopinj celzija, je previsoka in je potrebno <p>mirovati.</a></p>'
+        '<p><b>Temperatura</b></p>' +
+        '<p><a href="http://google.com">Mogoče gugl definicijo?</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -441,7 +442,7 @@ $(function() {
       var mouseOnDiv = $('#sistolicni input');
       var tipContent = $(
         '<p><b>Sistolični tlak</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=Sistoli%C4%8Dni+tlak">Sistolični tlak je tlak v arterijah <p>med srčnim utripom, ko se <p>srce skrči in iztisne kri <p>v ožilje.</a></p>'
+        '<p><a href="http://google.com">Mogoče gugl definicijo?</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -454,7 +455,7 @@ $(function() {
       var mouseOnDiv = $('#diastolicni input');
       var tipContent = $(
         '<p><b>Diastolični tlak</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=Diastoli%C4%8Dni+tlak">Diastolični tlak je tlak <p>v arterijah med dvema utripoma, <p>v času relaksacije srca.</a></p>'
+        '<p><a href="http://google.com">Mogoče gugl definicijo?</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -466,8 +467,8 @@ $(function() {
       // mouse-on example
       var mouseOnDiv = $('#nasicenost input');
       var tipContent = $(
-        '<p><b>Nasičenost krvi s kisikom</b></p>' +
-        '<p><a href="https://www.google.si/search?q=vi%C5%A1ina&oq=vi%C5%A1ina&aqs=chrome..69i57j0l5.1148j0j7&sourceid=chrome&ie=UTF-8#q=nasi%C4%8Denost+krvi+s+kisikom">Nam pove, ali je v krvi <p>dovolj kisika ali ne.</a></p>'
+        '<p><b>Nasičenost</b></p>' +
+        '<p><a href="http://google.com">Mogoče gugl definicijo?</a></p>'
       );
       mouseOnDiv.data('powertipjq', tipContent);
       mouseOnDiv.powerTip({
@@ -487,10 +488,12 @@ var config = {
     color: ['#00FCFF','#FF0022']
   }],
    center: function (d) {
-      return d.toFixed(0) + ' kg'
+      return d.toFixed(0) + ' let'
     }
 
 }
+
+
 var sgraf = new RadialProgressChart('#graf', config);
 
 var config2 = {
@@ -498,18 +501,41 @@ var config2 = {
   max: 200,
   round: false,
   series: [{
-    value: 87,
+    value: 0,
     color: ['#00FCFF','#FF0022']
   }],
     center: function (d) {
-      return d.toFixed(0) + ' kg'
+      return d.toFixed(0) + ' let'
     }
 }
 var sgraf2 = new RadialProgressChart('#graf2', config2);
 
 
+function pridobiPodatke() {
+
+  $.ajax({
+      type: 'GET',
+      url: 'https://github.com/zk1148/eZdravje/blob/gh-pages/podatki.json',
+      crossDomain: true,
+      cache: false,
+      success: function(data) {
+        
+        
+        starost = parseInt(data.fact[24].Value);
+        
+         sgraf2.update(starost);
+         
+         
+        }
+
+      
+    });
+ 
+}
+
+
+pridobiPodatke();
 
 
 
-
-
+    
