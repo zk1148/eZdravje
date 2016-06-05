@@ -4,15 +4,28 @@
   <meta charset="utf-8">
   <title>eZdravje :: 4. DN :: OIS 2015/2016</title>
   <link href="knjiznice/css/bootstrap.min.css" rel="stylesheet">
+  <link href="knjiznice/css/jquery.powertip.min.css" rel="stylesheet">
   <style>
     body {padding-top: 70px;}
+    #graf {float:left;}
+    #graf2 {float:left;}
+    .tekstzagraf {float:left; margin-left:30px; margin-top:30px;}
+    .tekstzagraf2 {float:left; margin-left:40px; margin-top:30px;}
   </style>
   <script src="knjiznice/js/jquery-2.2.3.min.js"></script>
   <script src="knjiznice/js/bootstrap.min.js"></script>
-  <script src="knjiznice/js/koda.js"></script>
+  <script src="knjiznice/js/jquery.powertip.min.js"></script>
+
 </head>
 <body>
-
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/sl_SI/sdk.js#xfbml=1&version=v2.6&appId=623543297810223";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <!-- ZAČETEK: Menujska vrstica na vrhu spletne strani -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -29,7 +42,7 @@
         <ul class="nav navbar-nav">
           <li><a href="opis.html">Opis ideje</a></li>
           <li><a href="nacrt.html">Načrt informacijske rešitve</a></li>
-          <li><a href="#">Generiranje podatkov</a></li>
+          <li><a href="javascript:generirajPodatke(1);generirajPodatke(2);generirajPodatke(3);">Generiranje podatkov</a></li>
         </ul>
       </div>
     </div>
@@ -38,13 +51,77 @@
 
   <!-- ZAČETEK: Vsebina aplikacije -->
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <p class="lead"><strong>TO-DO</strong>: Na tem mestu implementirajte vašo aplikacijo.</p>
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-lg-8 col-md-8 col-sm-8"><b>Izberi bolnika</b><div id="sporocilo"></div></div>
+                  <div class="col-lg-4 col-md-4 col-sm-4"><select onchange="napolniTabelo($('#izberiBolnika').val());" class="form-control input-sm" id="izberiBolnika"><option value=""></option></select></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">  
+            <div class="tekstzagraf"><b>Vaša teža</b></div>
+            <div class="tekstzagraf2"><b>Svetovno povprečje (WHO)</b></div>
+          </div>
       </div>
-    </div>
-  </div>
-  <!-- KONEC: Vsebina aplikacije -->
+        <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8"><b>Vnesi Ehr</b></div>
+                 <div class="col-lg-4 col-md-4 col-sm-4"><input type="text" class="form-control input-sm" id="vnesiEhr" placeholder="364452f1-f4de-43e5-b555-50ee936c0229"> <button type="button" class="btn btn-primary btn-xs" onclick="napolniTabelo($('#vnesiEhr').val());">Potrdi izbiro</button><span id="preberiSporocilo"></span></div>               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div id="graf"></div>
+          <div id="graf2"></div>
+         
+        </div>
+      </div>
+        <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-8"><b>Izpis</b> meritve <b>vitalnih znakov</b> bolnika</div>
+                <button type="button" class="btn btn-primary btn-xs" onclick="spremeniPodatke($('#VitalniEhr').val());">Spremeni podatke</button><span id="preberiSporocilo"></span>
+            </div>
+          </div>
+          <div id="podatki" class="panel-body">
+          <fieldset disabled>
+            <span class="label label-default">Ime</span><input id="ime" type="text" class="form-control input-mini" placeholder="Nekdo">
+            <span class="label label-default">Priimek</span><input id="priimek" type="text" class="form-control input-mini" placeholder="Nekaj">
+            <span class="label label-default">Starost</span><input id="starost" type="text" class="form-control input-mini" placeholder="666">
+            <span class="label label-default">EHR ID</span><input id="VitalniEhr" type="text" class="form-control input-mini" placeholder="7b661e12-3a98-21ad-c29e-2dc9f5a3d885">
+          </fieldset>
+            <span class="label label-default">Telesna višina</span><div id ="visina" class="input-group"><input id="TelesnaVisina" type="text" class="form-control input-mini" placeholder="185"><span class="input-group-addon">cm</span></div>
+            <span class="label label-default">Telesna teža</span><div id="teza" class="input-group"><input id="TelesnaTeza" type="text" class="form-control input-mini" placeholder="80.00"><span class="input-group-addon">kg</span></div>
+            <span class="label label-default">Telesna temperatura</span><div id="temperatura" class="input-group"><input id="TelesnaTemperatura" type="text" class="form-control input-mini" placeholder="36.50"><span class="input-group-addon">°C</span></div>
+            <span class="label label-default">Sistolični krvni tlak</span><div id="sistolicni" class="input-group"><input id="KrvniTlakSistolicni" type="text" class="form-control input-mini" placeholder="118"><span class="input-group-addon">mm Hg</span></div>
+            <span class="label label-default">Diastolični krvni tlak</span><div id="diastolicni" class="input-group"><input id="KrvniTlakDiastolicni" type="text" class="form-control input-mini" placeholder="92"><span class="input-group-addon">mm Hg</span></div>
+            <span class="label label-default">Nasičenost krvi s kisikom</span><div id="nasicenost" class="input-group"><input id="NasicenostKrviSKisikom" type="text" class="form-control input-mini" placeholder="98"><span class="input-group-addon">%</span></div>
+            </div>
+        </div>
+      </div>
+       <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="fb-page" data-href="https://www.facebook.com/who" data-tabs="timeline" data-width="300" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/who"><a href="https://www.facebook.com/who">World Health Organization (WHO)</a></blockquote></div></div>
 
+          </div>
+    </div>
+
+
+  </div>
+ <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="knjiznice/js/radial-progress-chart.min.js"></script>
+  <script src="knjiznice/js/koda.js"></script>
+
+  <!-- KONEC: Vsebina aplikacije -->
 </body>
 </html>
+ 

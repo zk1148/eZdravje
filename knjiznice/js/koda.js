@@ -39,4 +39,24 @@ function generirajPodatke(stPacienta) {
 }
 
 
+
 // TODO: Tukaj implementirate funkcionalnost, ki jo podpira vaša aplikacija
+
+
+$(document).ready(function() {
+
+  /**
+   * Napolni testne vrednosti (ime, priimek in datum rojstva) pri kreiranju
+   * EHR zapisa za novega bolnika, ko uporabnik izbere vrednost iz
+   * padajočega menuja (npr. Pujsa Pepa).
+   */
+  $('#preberiPredlogoBolnika').change(function() {
+    $("#kreirajSporocilo").html("");
+    var podatki = $(this).val().split(",");
+    $("#kreirajIme").val(podatki[0]);
+    $("#kreirajPriimek").val(podatki[1]);
+    $("#kreirajVisino").val(podatki[2]);
+    $("#id_uporabnika").val(podatki[3]);
+  });
+  
+});
